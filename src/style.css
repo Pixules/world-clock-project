@@ -51,12 +51,9 @@ footer {
   justify-content: space-between;
   font-family: "Quicksand", sans-serif;
   padding: 13px 0;
-  border-bottom: 1px dashed #5e596c;
+  border-top: 1px dashed #5e596c;
 }
 
-.city:last-child {
-  border: none;
-}
 .time {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
@@ -70,8 +67,4 @@ footer {
 
 .date {
   opacity: 0.7;
-}
-
-#locations {
-  border-bottom: 1px dashed #5e596c;
 }
