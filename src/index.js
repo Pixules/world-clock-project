@@ -33,7 +33,7 @@ function showSelectedCountry(event) {
     let cityName = currentTimeZone.replace("_", " ").split("/")[1];
     let cityTime = moment().tz(event.target.value);
     let cityElement = document.querySelector("#locations");
-    cityElement.innerHTML += `<div class="city">
+    cityElement.innerHTML = `<div class="city">
           <div>
             <h2>${cityName}</h2>
             <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
