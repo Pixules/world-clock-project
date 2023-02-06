@@ -22,6 +22,18 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
+
+  let thirdCityElement = document.querySelector("#third-location");
+  if (thirdCityElement) {
+    let thirdCityDate = thirdCityElement.querySelector(".date");
+    let thirdCityTimeElement = thirdCityElement.querySelector(".time");
+    let thirdCityTime = moment().tz("Europe/Moscow");
+
+    thirdCityDate.innerHTML = thirdCityTime.format("MMMM Do YYYY");
+    thirdCityTimeElement.innerHTML = thirdCityTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 function showSelectedCountry(event) {
