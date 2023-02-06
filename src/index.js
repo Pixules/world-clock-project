@@ -24,12 +24,12 @@ function updateTime() {
   }
 }
 
-updateTime();
-setInterval(updateTime, 1000);
-
 function showSelectedCountry(event) {
   if (event.target.value.length > 0) {
     let currentTimeZone = event.target.value;
+    if (currentTimeZone === "current") {
+      currentTimeZone = moment.tz.guess();
+    }
     let cityName = currentTimeZone.replace("_", " ").split("/")[1];
     let cityTime = moment().tz(event.target.value);
     let cityElement = document.querySelector("#locations");
@@ -44,6 +44,9 @@ function showSelectedCountry(event) {
         </div>`;
   }
 }
+
+updateTime();
+setInterval(updateTime, 1000);
 
 let citySelect = document.querySelector("#cities");
 
